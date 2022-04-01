@@ -3,12 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import { signInWithGoogle, signOut } from "../firebaseConfig";
 import "./Header.css";
-import MeRoute from "./MeRoute";
 
 const Header = () => {
   const { user } = useContext(AuthContext);
-
-  const name: string | undefined = useParams().name;
 
   return (
     <header className="Header">
