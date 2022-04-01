@@ -20,10 +20,6 @@ const HomeRoute = () => {
   const [searchParams] = useSearchParams();
   const to: string | null = searchParams.get("to");
 
-  const queryStringParams: QueryStringParams = {
-    ...(to ? { to } : {}),
-  };
-
   const getAndSetShoutouts = () => {
     getShoutouts({}).then((response) => {
       setShoutouts(response);
